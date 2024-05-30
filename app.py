@@ -17,7 +17,7 @@ if tesseract_path:
 else:
     # Check common installation paths or set a default
     if os.name == 'nt':  # Windows
-        pytesseract.pytesseract.tesseract_cmd = r'Tesseract-OCR\tesseract.exe'
+        pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
     else:
         pytesseract.pytesseract.tesseract_cmd = '/usr/bin/tesseract'
 
