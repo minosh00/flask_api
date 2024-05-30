@@ -76,6 +76,8 @@ def process_image(image_path):
     
     return {'nic_numbers': nic_numbers}
 
+import os
+
 @app.route('/upload_image', methods=['POST'])
 def upload_file():
     if 'file' not in request.files:
@@ -87,6 +89,8 @@ def upload_file():
     
     if file:
         filename = file.filename
+        if not os.path.exists('uploads'):
+            os.makedirs('uploads')
         file_path = os.path.join('uploads', filename)
         file.save(file_path)
         
@@ -104,6 +108,7 @@ def upload_file():
         os.remove(file_path)
         
         return jsonify(result)
+
 
 if __name__ == '__main__':
     if not os.path.exists('uploads'):
