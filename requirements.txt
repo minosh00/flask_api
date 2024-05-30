@@ -3,4 +3,5 @@ opencv-python-headless
 pytesseract
 numpy
 gunicorn
+flask_cors
 Pillow
