@@ -2,4 +2,5 @@ Flask
 opencv-python-headless
 pytesseract
 numpy
+gunicorn
 Pillow
